@@ -1,0 +1,39 @@
+{
+  "title": "Correr un contenedor de docker",
+  "description": "Aprenderás el comando para correr un contenedor simple con nginx.",
+  "difficulty": "beginner",
+  "time": "2 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Comando docker run",
+        "text": "step1.md"
+      },
+      {
+        "title": "Comando docker ps",
+        "text": "step2.md"
+      },
+      {
+        "title": "Correr un contenedor con Ubuntu",
+        "text": "step3.md"
+      },
+      {
+        "title": "Borrar un contenedor",
+        "text": "step4.md"
+      }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "bash"
+  }
+}
