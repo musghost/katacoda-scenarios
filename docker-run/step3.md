@@ -6,7 +6,7 @@ Vamos a utilizar el comando `docker run -it ubuntu bash`{{execute}} para correr 
 root@9df55f0a4335:/#
 ```
 
-Ahora podremos ejecutar `apt-get update`{{execute}} para actualizar los repositorios y después ` apt-get install vim -y` para instalar vim.
+Ahora podremos ejecutar `apt-get update`{{execute}} para actualizar los repositorios y después ` apt-get install vim -y`{{execute}} para instalar vim.
 
 Ahora exploremos los procesos del contenedor ejecutando `ps aux`{{execute}} y veremos que sólo hay dos procesos.
 
