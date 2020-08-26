@@ -1,24 +1,24 @@
 {
-  "title": "Correr un contenedor de docker",
-  "description": "Aprenderás el comando para correr contenedores de Docker e interactuar con ellos.",
+  "title": "¡Correr más contenedores!",
+  "description": "Aprenderás a correr contenedores en modo detached e interactivos. También aprenderás a asignarles un nombre y abrir puertos para hacer peticiones desde fuera.",
   "difficulty": "principiante",
-  "time": "8 minutos",
+  "time": "6 minutos",
   "details": {
     "steps": [
       {
-        "title": "Comando docker run",
+        "title": "Correr un comando en modo detached",
         "text": "step1.md"
       },
       {
-        "title": "Comando docker ps",
+        "title": "Correr contenedores interactivos",
         "text": "step2.md"
       },
       {
-        "title": "Correr un contenedor con Ubuntu",
+        "title": "Asignar un nombre a un contenedor",
         "text": "step3.md"
       },
       {
-        "title": "Borrar un contenedor",
+        "title": "Publicar o abrir un puerto en un contendor",
         "text": "step4.md"
       }],
     "intro": {
