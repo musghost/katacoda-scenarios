@@ -1,0 +1,39 @@
+{
+  "title": "Crear imágenes de Docker",
+  "description": "Aprenderás a crear imágenes de Docker con el comando commit y el comando build.",
+  "difficulty": "principiante",
+  "time": "8 minutos",
+  "details": {
+    "steps": [
+      {
+        "title": "Crear una imagen con docker commit",
+        "text": "step1.md"
+      },
+      {
+        "title": "Crear una imagen con docker build",
+        "text": "step2.md"
+      },
+      {
+        "title": "Crear una imagen con entrypoint y cmd",
+        "text": "step3.md"
+      },
+      {
+        "title": "Eliminar imágenes",
+        "text": "step4.md"
+      }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
