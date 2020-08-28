@@ -1,0 +1,39 @@
+{
+  "title": "Usar volúmenes con Docker",
+  "description": "Aprenderás a utilizar volúmenes en tus contenedores de Docker.",
+  "difficulty": "principiante",
+  "time": "6 minutos",
+  "details": {
+    "steps": [
+      {
+        "title": "Montar un volumen a un contenedor",
+        "text": "step1.md"
+      },
+      {
+        "title": "Montar archivos de configuración",
+        "text": "step2.md"
+      },
+      {
+        "title": "Reutilizar volúmenes",
+        "text": "step3.md"
+      },
+      {
+        "title": "Administrar volúmenes",
+        "text": "step4.md"
+      }],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
