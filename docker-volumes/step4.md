@@ -1,6 +1,7 @@
-## Borrar un contenedor
+## Administrar volúmenes
 
-Para borrar un contenedor necesitamos saber su nombre o ID. Primero vemos qué contenedores existen que no se encuentren corriendo, es decir, con status `Exited`, para ello utilizamos el comando `docker ps -a`{{execute}} y tomamos  el valor de `Container ID` de cualquier contenedor y se lo pasamos como parámetro al comando `docker rm`.
+Como lo vimos anteriormente, para administrar los volúmenes necesitamos utilizar el comando `docker volume`.
 
-Después de ejecutarlo vuelve a correr el comando `docker ps -a`{{execute}} para revisar que efectivamente el contenedor ha sido borrado.
+Vamos a listar los volúmenes existentes con `docker volume ls`{{execute}}. Y después podemos borrarlos utilizando el comando `docker volume rm ` que recibe como argumento el ID o nombre del volumen.
 
+Si queremos borrar un volúmen que esté ocupado por un contenedor que se encuentre corriendo entonces primero tenemos que detemer y borrar el contenedor. Una vez que el volumen se encuentre libre entonces podremos borrarlo sin problema alguno.

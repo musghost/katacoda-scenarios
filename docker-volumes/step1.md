@@ -1,20 +1,23 @@
-## Correr un contenedor con el comando docker run
+## Montar volúmenes a contenedores
 
-Vamos a correr un contenedor de Docker sencillo. Para ello utilizarás el comando `docker run nginx`{{execute}}.
+Montar volúmenes en Docker no es más que hacer que un directorio en el host sea visible en el filesystem de un contenedor.
 
-Notarás que docker descargará la imagen de Docker Registry, ya que no se encuentra en el host.
+La manera más sencilla de montar volúmenes a contenedores es utilizando la opción `-v` del comando `docker run`. Podemos montar dos tipos de volúmenes: bind-mount y volúmenes.
+
+Bind-mount monta directorios que no están administrados por Docker. Y cuando hablamos de volúmenes de Docker nos referemos a los directorios que Docker administra y guarda en `/var/lib/docker/volumes`.
+
+Comenzaremos por montar un volumen de la manera más sencilla posible corriendo el comando `docker run -n cont_vol -it -v /directorio ubuntu bash`{{execute}}.
+
+Una vez adentro del contenedor podemos ver que el directorio `/directorio` se encuentra en el filesystem del contenedor y lo podemos comprobar ejecutando `ls -la /`{{execute}}.
+
+Si accedemos al contenedor con `cd /directorio`{{execute}} y creamos un par de archivos con `touch archivo1 && touch archivo2`{{execute}} podremos verlos reflejados en el host.
+
+Después nos salimos del contenedor con `exit`{{execute}}.
 
 ```
-Using default tag: latest
-latest: Pulling from library/nginx
-bf5952930446: Pull complete 
-cb9a6de05e5a: Pull complete 
-9513ea0afb93: Pull complete 
-b49ea07d2e93: Pull complete 
-a5e4a503d449: Pull complete 
-Digest: sha256:b0ad43f7ee5edbc0effbc14645ae7055e21bc1973aee5150745632a24a752661
-Status: Downloaded newer image for nginx:latest
-docker.io/library/nginx:latest
-```
+docker inspect cont_vol || grep -A5 Mounts
+```{{execute}}
 
-Ahora puedes detener el contenedor con la combinación de teclas `Ctrl+C`.
+Si revisamos el contenido del directorio indicado en el valor de `Source` con el comando `ls -la` podremos ver que los archivos que creamos dentro del contenedor se encuentran ahí.
+
+Podemos también ver que Docker creó un objeto tipo volumen automáticamente al cual asignó un nombre aleatorio. Si ejecutamos `docker volume ls`{{execute}} podemos ver que el volumen aparece ahí. Si ejecutamos `docker volume inspect ` y le pasamos el ID del volumen entonces veremos la misma información.
